@@ -1,0 +1,150 @@
+:root {
+    --primary-color: forestgreen;
+    --accent1-color: steelblue;
+    --accent2-color: beige;
+    --body-font: "Segoe UI", Roboto, Arial, sans-serif;
+    --heading-font: "Georgia", "Times New Roman", serif;
+    --max-width: 840px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #222;
+    background-color: beige;
+    line-height: 1.5;
+}
+
+header,
+main,
+footer {
+    width: var(--max-width);
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+nav.mainnav a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+.hero {
+    position: relative;
+    margin-top: 16px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    opacity: 0.9;
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+    font-size: 2rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin-left: 12px;
+    border-radius: 4px;
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.history,
+.adventure {
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.socialmedia img {
+    width: 28px;
+    height: auto;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+
+    header,
+    main,
+    footer {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero article img {
+        width: 100px;
+    }
+}
