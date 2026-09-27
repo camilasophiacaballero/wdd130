@@ -1,5 +1,5 @@
 :root {
-    --primary-color: forestgreen;
+    --primary-color: #006400;
     --accent1-color: steelblue;
     --accent2-color: beige;
     --body-font: "Segoe UI", Roboto, Arial, sans-serif;
@@ -28,7 +28,6 @@ footer {
     padding: 0 16px;
 }
 
-/* Header con Grid */
 header {
     display: grid;
     grid-template-columns: 150px auto;
@@ -42,7 +41,6 @@ header {
     display: block;
 }
 
-/* Nav con Flexbox */
 nav.mainnav {
     display: flex;
     justify-content: flex-end;
@@ -61,7 +59,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Hero */
 .hero {
     position: relative;
     margin-top: 16px;
@@ -105,7 +102,6 @@ h2 {
     border-radius: 4px;
 }
 
-/* History con Grid */
 .history {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -121,7 +117,6 @@ h2 {
     border-radius: 6px;
 }
 
-/* Adventure con Grid */
 .adventure {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -141,7 +136,6 @@ h2 {
     border-radius: 6px;
 }
 
-/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -166,7 +160,6 @@ footer {
     vertical-align: middle;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
 
     header,
