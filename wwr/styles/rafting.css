@@ -13,18 +13,25 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: var(--body-font);
     color: #222;
-    background-color: beige;
+    background-color: var(--accent2-color);
     line-height: 1.5;
 }
 
 header,
 main,
 footer {
-    width: var(--max-width);
+    max-width: var(--max-width);
     margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 header {
@@ -47,6 +54,14 @@ nav.mainnav a {
     font-weight: 600;
 }
 
+nav.mainnav a:focus,
+nav.mainnav a:focus-visible,
+.socialmedia a:focus,
+.socialmedia a:focus-visible {
+    outline: 3px solid rgba(34, 139, 34, 0.25);
+    outline-offset: 2px;
+}
+
 h1,
 h2 {
     font-family: var(--heading-font);
@@ -64,28 +79,35 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
+    z-index: 0;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
+    left: 0;
+    right: 0;
     width: 100%;
     padding: 12px;
     text-align: center;
-    opacity: 0.9;
+    opacity: 0.95;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
     font-size: 2rem;
+    z-index: 2;
 }
 
 .hero article {
     position: absolute;
     bottom: 16px;
     left: 16px;
-    width: calc(100% - 32px);
-    background-color: rgba(255, 255, 255, 0.85);
+    right: 16px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.92);
     padding: 12px;
     border-radius: 4px;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .hero article img {
@@ -94,14 +116,15 @@ h2 {
     height: auto;
     margin-left: 12px;
     border-radius: 4px;
+    display: block;
 }
 
 nav,
 p,
 section,
 article {
-    margin: 16px;
-    padding: 8px;
+    margin: 16px 0;
+    padding: 8px 0;
 }
 
 .history,
@@ -121,15 +144,22 @@ footer {
     color: #555;
 }
 
+.socialmedia a {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+}
+
 .socialmedia img {
     width: 28px;
     height: auto;
-    margin-left: 12px;
     vertical-align: middle;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.hero::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 @media (max-width: 900px) {
@@ -137,7 +167,7 @@ footer {
     header,
     main,
     footer {
-        width: 95%;
+        max-width: 95%;
     }
 
     .hero h1 {
@@ -146,5 +176,9 @@ footer {
 
     .hero article img {
         width: 100px;
+    }
+
+    .hero article img {
+        float: right;
     }
 }
