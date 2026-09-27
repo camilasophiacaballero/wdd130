@@ -13,11 +13,6 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     font-family: var(--body-font);
     color: #222;
@@ -30,14 +25,14 @@ main,
 footer {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
 }
 
+/* Header con Grid */
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px auto;
     align-items: center;
-    justify-content: space-between;
     padding: 16px 0;
 }
 
@@ -47,19 +42,17 @@ header {
     display: block;
 }
 
+/* Nav con Flexbox */
+nav.mainnav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
 nav.mainnav a {
-    margin-left: 16px;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 600;
-}
-
-nav.mainnav a:focus,
-nav.mainnav a:focus-visible,
-.socialmedia a:focus,
-.socialmedia a:focus-visible {
-    outline: 3px solid rgba(34, 139, 34, 0.25);
-    outline-offset: 2px;
 }
 
 h1,
@@ -68,6 +61,7 @@ h2 {
     color: var(--primary-color);
 }
 
+/* Hero */
 .hero {
     position: relative;
     margin-top: 16px;
@@ -79,7 +73,6 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
-    z-index: 0;
 }
 
 .hero h1 {
@@ -87,14 +80,12 @@ h2 {
     top: 20px;
     left: 0;
     right: 0;
-    width: 100%;
     padding: 12px;
     text-align: center;
-    opacity: 0.95;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
     font-size: 2rem;
-    z-index: 2;
+    opacity: 0.95;
 }
 
 .hero article {
@@ -102,52 +93,71 @@ h2 {
     bottom: 16px;
     left: 16px;
     right: 16px;
-    width: auto;
     background-color: rgba(255, 255, 255, 0.92);
     padding: 12px;
     border-radius: 4px;
-    z-index: 2;
-    overflow: hidden;
 }
 
 .hero article img {
     float: right;
     width: 125px;
-    height: auto;
     margin-left: 12px;
     border-radius: 4px;
-    display: block;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px 0;
-    padding: 8px 0;
-}
-
-.history,
-.adventure {
+/* History con Grid */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
     background-color: white;
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
 }
 
+.history img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Adventure con Grid */
+.adventure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.adventure figure {
+    text-align: center;
+}
+
+.adventure img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Footer */
 footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 0;
     font-size: 0.9rem;
     color: #555;
 }
 
+.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
 .socialmedia a {
     text-decoration: none;
-    display: inline-block;
-    margin-left: 8px;
 }
 
 .socialmedia img {
@@ -156,12 +166,7 @@ footer {
     vertical-align: middle;
 }
 
-.hero::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
+/* Responsive */
 @media (max-width: 900px) {
 
     header,
@@ -178,7 +183,11 @@ footer {
         width: 100px;
     }
 
-    .hero article img {
-        float: right;
+    .history {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure {
+        grid-template-columns: 1fr 1fr;
     }
 }
