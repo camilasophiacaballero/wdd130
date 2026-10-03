@@ -48,17 +48,26 @@
                 <input type="email" id="email" name="email" required />
 
                 <p>Message Purpose:</p>
-                <label><input type="radio" name="purpose" value="general" /> General Inquiry</label>
-                <label><input type="radio" name="purpose" value="reservation" /> Reservation
-                    Question</label>
-                <label><input type="radio" name="purpose" value="suggestion" /> Website
-                    Suggestion</label>
+                <label for="general">
+                    <input type="radio" id="general" name="purpose" value="general" /> General
+                    Inquiry
+                </label>
+                <label for="reservation">
+                    <input type="radio" id="reservation" name="purpose" value="reservation" />
+                    Reservation Question
+                </label>
+                <label for="suggestion">
+                    <input type="radio" id="suggestion" name="purpose" value="suggestion" /> Website
+                    Suggestion
+                </label>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5"></textarea>
 
-                <label><input type="checkbox" name="newsletter" /> Please subscribe me to the
-                    monthly newsletter</label>
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" /> Please subscribe me
+                    to the monthly newsletter
+                </label>
 
                 <button type="submit">Get in Touch!</button>
             </form>
@@ -72,7 +81,7 @@
             </figure>
             <figure>
                 <img src="images/employee2.jpg" alt="Jane Smith - Customer Service" />
-                <figcaption>Jane Smith – Customer Service</figcaption>
+                <figcaption>David Smith – Customer Service</figcaption>
             </figure>
             <figure>
                 <img src="images/employee3.jpg" alt="Carlos Rivera - Safety Coordinator" />
