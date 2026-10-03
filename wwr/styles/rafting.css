@@ -225,3 +225,8 @@ footer {
     width: 100%;
     border-radius: 6px;
 }
+
+.map {
+    width: 100%;
+    max-width: 100%;
+}
