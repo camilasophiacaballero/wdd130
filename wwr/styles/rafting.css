@@ -184,3 +184,44 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.company-info,
+.contact-form,
+.employees {
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    text-align: center;
+}
+
+.employees img {
+    width: 100%;
+    border-radius: 6px;
+}
