@@ -231,3 +231,44 @@ footer {
     max-width: 100%;
     border: none;
 }
+
+.newsletter,
+.cta {
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.newsletter form {
+    display: grid;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter input,
+.newsletter button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: var(--accent1-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
