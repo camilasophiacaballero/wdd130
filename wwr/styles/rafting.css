@@ -59,7 +59,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Hero */
 .hero {
     position: relative;
     margin-top: 16px;
@@ -86,7 +85,6 @@ h2 {
     opacity: 0.95;
 }
 
-/* Sections */
 .history,
 .adventure,
 .company-info,
@@ -102,7 +100,6 @@ h2 {
     margin: 16px 0;
 }
 
-/* Grid layouts */
 .history {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -123,6 +120,9 @@ h2 {
 
 .adventure img {
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
     border-radius: 6px;
 }
 
@@ -146,11 +146,12 @@ h2 {
 
 .trip img {
     width: 100%;
+    max-width: 350px;
+    margin: 0 auto 12px;
+    display: block;
     border-radius: 6px;
-    margin-bottom: 12px;
 }
 
-/* Forms */
 .contact-form form,
 .newsletter form {
     display: grid;
@@ -177,7 +178,6 @@ h2 {
     cursor: pointer;
 }
 
-/* CTA */
 .cta {
     text-align: center;
 }
@@ -193,7 +193,6 @@ h2 {
     font-weight: bold;
 }
 
-/* Table */
 .trip-table table {
     width: 100%;
     border-collapse: collapse;
@@ -206,7 +205,6 @@ h2 {
     text-align: center;
 }
 
-/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -227,7 +225,36 @@ footer {
     vertical-align: middle;
 }
 
-/* Responsive */
+.about-hero {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 24px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.about-section img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.about-section h2 {
+    color: var(--accent1-color);
+    margin-bottom: 8px;
+}
+
 @media (max-width: 900px) {
 
     header,
@@ -246,5 +273,9 @@ footer {
 
     .adventure {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
     }
 }
